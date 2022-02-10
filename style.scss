@@ -1,0 +1,147 @@
+$black:#000;
+$grey:#ccc;
+
+$text-size:1.5rem;
+$text-size50:2.4rem;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.8rem 1.6rem;
+}
+header {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1200px;
+    height: 68px;
+
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+main {
+    margin-top: 10rem;
+    padding: 0.8rem 1.6rem;
+}
+section {
+    display: flex;
+    padding: 1.6rem  0.8rem ;
+    div {
+        flex: 25%;
+        text-align: center;
+        padding: 0 0.8rem;
+        h2 {
+            margin: 1rem 0;
+        }
+    }
+}
+article {
+    display: block;
+    margin: auto;
+    width: 300px;
+   div {
+       display: flex;
+
+   }
+}
+.footerbar {
+    padding: 0.8rem 1.6rem;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.footerbar:hover {
+    background-color: #000;
+    color: white;
+}
+.footerbar-secondery-child {
+    color: white;
+    background-color: $black;
+}
+.footerbar-secondery-child:hover {
+    color: $black;
+    background-color: $grey;
+}
+nav {
+    
+    div {
+        width: 22px;
+        border: 1px solid $black;
+        margin-bottom: 5px; 
+        background-color: $black;
+    }
+    & > div:nth-child(3) {
+        margin: 0;
+    }
+
+}
+
+.mysitebar {
+    position:absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 0;
+    height: 100vh;
+    background-color: white;
+    transition: width 2s;
+    
+}
+input[type='checkbox']:checked + .mysitebar {
+    
+    position: fixed;
+    display: block;
+    width: 40%;
+    min-width: 300px;
+    transition-timing-function: ease;
+    
+  }
+ul {
+    list-style: none;
+    li {
+
+        a {
+            display: block;
+            color: #000;
+            font: {
+                size: $text-size50;  
+            }
+            text-decoration: none;
+            padding: 2rem;
+        }
+        & > a:hover {
+            background-color: $grey;
+        }
+    }
+}
+h2 {
+    line-height: 1.5;
+    font: {
+        size: $text-size50;
+        weight:400;
+            }
+}
+p {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    line-height: 1.5;
+}
+img {
+    display: block;
+    width: 100%;
+    max-height: 410px;
+   
+}
